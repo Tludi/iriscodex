@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Hybridizer</th>
       <th>Name</th>
       <th>Region</th>
       <th>Year</th>
@@ -15,6 +16,7 @@
   <tbody>
     <% @irisplants.each do |irisplant| %>
       <tr>
+        <td><%= irisplant.hybridizer %></td>
         <td><%= irisplant.name %></td>
         <td><%= irisplant.region %></td>
         <td><%= irisplant.year %></td>
