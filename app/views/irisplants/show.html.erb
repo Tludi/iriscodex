@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @irisplant.name %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @irisplant.region %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @irisplant.year %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @irisplant.image_url %>
+</p>
+
+<p>
+  <strong>Iristype:</strong>
+  <%= @irisplant.iristype %>
+</p>
+
+<%= link_to 'Edit', edit_irisplant_path(@irisplant) %> |
+<%= link_to 'Back', irisplants_path %>

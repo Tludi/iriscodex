@@ -1,0 +1,33 @@
+<h1>Listing irisplants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Region</th>
+      <th>Year</th>
+      <th>Image url</th>
+      <th>Iristype</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @irisplants.each do |irisplant| %>
+      <tr>
+        <td><%= irisplant.name %></td>
+        <td><%= irisplant.region %></td>
+        <td><%= irisplant.year %></td>
+        <td><%= irisplant.image_url %></td>
+        <td><%= irisplant.iristype %></td>
+        <td><%= link_to 'Show', irisplant %></td>
+        <td><%= link_to 'Edit', edit_irisplant_path(irisplant) %></td>
+        <td><%= link_to 'Destroy', irisplant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Irisplant', new_irisplant_path %>

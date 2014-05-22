@@ -1,0 +1,37 @@
+<%= form_for(@irisplant) do |f| %>
+  <% if @irisplant.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@irisplant.errors.count, "error") %> prohibited this irisplant from being saved:</h2>
+
+      <ul>
+      <% @irisplant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :region %><br>
+    <%= f.number_field :region %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.number_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :image_url %><br>
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :iristype %><br>
+    <%= f.text_field :iristype %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
