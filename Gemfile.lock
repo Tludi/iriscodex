@@ -176,6 +176,7 @@ DEPENDENCIES
   activeadmin!
   coffee-rails (~> 4.0.0)
   devise
+  has_scope
   jbuilder (~> 2.0)
   jquery-rails
   pg

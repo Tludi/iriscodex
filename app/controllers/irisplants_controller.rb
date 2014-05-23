@@ -1,10 +1,20 @@
 class IrisplantsController < ApplicationController
   before_action :set_irisplant, only: [:show, :edit, :update, :destroy]
+  has_scope :sibtype
 
   # GET /irisplants
   # GET /irisplants.json
   def index
-    @irisplants = Irisplant.all
+    @hybridizers = Hybridizer.order(lastname: :asc)
+
+    if params[:iristype]
+      @irisplants = Irisplant.all.where(iristype: params[:iristype])
+    elsif params[:hybridizer]
+      @irisplants = Irisplant.all.where(hybridizer: params[:hybridizer])
+    else
+      @irisplants = Irisplant.all
+    end
+    # @irisplants = apply_scopes(Irisplant).all
   end
 
   # GET /irisplants/1

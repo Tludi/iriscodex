@@ -1,0 +1,29 @@
+<h1>Listing hybridizers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Irisplant</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hybridizers.each do |hybridizer| %>
+      <tr>
+        <td><%= hybridizer.firstname %></td>
+        <td><%= hybridizer.lastname %></td>
+        <td><%= hybridizer.irisplant_id %></td>
+        <td><%= link_to 'Show', hybridizer %></td>
+        <td><%= link_to 'Edit', edit_hybridizer_path(hybridizer) %></td>
+        <td><%= link_to 'Destroy', hybridizer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hybridizer', new_hybridizer_path %>

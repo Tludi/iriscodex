@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @hybridizer.firstname %>
+</p>
+
+<p>
+  <strong>Lastname:</strong>
+  <%= @hybridizer.lastname %>
+</p>
+
+<p>
+  <strong>Irisplant:</strong>
+  <%= @hybridizer.irisplant_id %>
+</p>
+
+<%= link_to 'Edit', edit_hybridizer_path(@hybridizer) %> |
+<%= link_to 'Back', hybridizers_path %>
