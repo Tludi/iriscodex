@@ -47,4 +47,6 @@ gem 'has_scope'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
 
-ruby "2.1.1"
+gem 'unicorn'
+
+ruby "2.1.0"
