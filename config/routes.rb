@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :hybridizers
+  
+  resources :irisplants
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  resources :irisplants
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

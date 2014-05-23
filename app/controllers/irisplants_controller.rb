@@ -10,7 +10,7 @@ class IrisplantsController < ApplicationController
     if params[:iristype]
       @irisplants = Irisplant.all.where(iristype: params[:iristype])
     elsif params[:hybridizer]
-      @irisplants = Irisplant.all.where(hybridizer: params[:hybridizer])
+      @irisplants = Irisplant.where(:hybridizer_id => params[:hybridizer])
     else
       @irisplants = Irisplant.all
     end
@@ -79,6 +79,6 @@ class IrisplantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def irisplant_params
-      params.require(:irisplant).permit(:hybridizer, :name, :region, :year, :image_url, :iristype)
+      params.require(:irisplant).permit(:hybridizer_id, :name, :region, :year, :image_url, :iristype)
     end
 end

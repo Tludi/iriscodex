@@ -4,13 +4,16 @@
     <!-- Post Row -->
 <div id="blog">
   <div class="section_header">
-            <h2>Iris Codex</h2>
+            <!-- <h2>Iris Codex</h2> -->
 
             <!-- <input type="text" class="search-query form-control" placeholder="Search"> -->
           </div>
           <h3 class="text alert alert-success">Initial selection of Irises that are part of the 2014/2015 Oregon Garden Tours
             </h3>
   <div class="row post_row">
+    <% if @irisplants.empty? %>
+      <h4 class="well">That hybridizer does not have any Irises in the database yet.</h3>
+    <% else %>
       <% @irisplants.each do |irisplant| %>
       <div class="span3">
         <div class="post">
@@ -29,7 +32,7 @@
           </div>
           <div class="author_box">
            <p>Hybridizer:
-           <%= irisplant.hybridizer %>
+           <%= irisplant.hybridizer.lastname if irisplant.hybridizer %>
            </p>
            <br/>
          </div>
@@ -37,6 +40,7 @@
         <br/>
       </div>
       <% end %>
+    <% end -%>
 
     </div>
     </div>
