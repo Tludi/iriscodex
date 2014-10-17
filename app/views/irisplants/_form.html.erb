@@ -34,6 +34,10 @@
     <%= f.label :iristype %><br>
     <%= f.text_field :iristype %>
   </div>
+  <div class="field">
+    <%= f.label :garden %><br>
+    <%= f.select(:garden, @gardens.map { |value| [value, value] }) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

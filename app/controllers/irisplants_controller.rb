@@ -25,6 +25,7 @@ class IrisplantsController < ApplicationController
   # GET /irisplants/new
   def new
     @irisplant = Irisplant.new
+    @gardens = ["Aitken", "Mt Pleasant", "Miller", "Wild", "Mid America", "Schreiners"]
   end
 
   # GET /irisplants/1/edit
@@ -79,6 +80,6 @@ class IrisplantsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def irisplant_params
-      params.require(:irisplant).permit(:hybridizer_id, :name, :region, :year, :image_url, :iristype)
+      params.require(:irisplant).permit(:hybridizer_id, :name, :region, :year, :image_url, :iristype, :garden)
     end
 end

@@ -4,8 +4,10 @@ Iris plant database app using Active Admin as a backend
 
 Items to do:
 
-General user authentication
-Paperclip integration for image upload
+- General user authentication
+- Paperclip integration for image upload
+- Add search box
+- 
 
 More...
 
